@@ -12,7 +12,7 @@ function App() {
     fetch(`https://newsapi.org/v2/everything?q=tesla&from=2022-05-15&sortBy=publishedAt&apiKey=${apiKey}`)
       .then((response) => response.json())
       .then((json) => setData(json));
-  }, [])
+  }, [apiKey])
 
   console.log(data);
 
